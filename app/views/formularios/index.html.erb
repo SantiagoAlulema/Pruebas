@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Formularios</h1>
+
+<div class="form-group " width="100%">
+
+<select id="categories" class = "search_files">
+    <%= @select_options.each do |option| %>
+    <option><%= option %></option>
+    <% end %>
+</select>
+</div>
+
+  <%= render 'index' %>
+
+
+
+<br>
+
+<%= link_to 'New Formulario', new_formulario_path %>
+
+<script type="text/javascript">
+
+</script>

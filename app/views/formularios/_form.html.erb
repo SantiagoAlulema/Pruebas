@@ -1,0 +1,32 @@
+<%= form_with(model: formulario, local: true, :multipart => true) do |form| %>
+  <% if formulario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(formulario.errors.count, "error") %> prohibited this formulario from being saved:</h2>
+
+      <ul>
+      <% formulario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.file_field :title, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover_letter %>
+    <%= form.text_area :cover_letter, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.select :categoria, get_name_folder, id: :formulario_categoria, include_blank: 'Please choose', :required => true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

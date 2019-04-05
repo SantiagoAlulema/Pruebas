@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">x</button>
+  <h4 class="modal-title" id="myModalLabel"><%= @formulario.title %></h4>
+</div>
+<div class="modal-body">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @formulario.title %>
+  </p>
+
+  <p>
+    <strong>Cover letter:</strong>
+    <%= @formulario.cover_letter %>
+  </p>
+</div>
+<div class="modal-footer">
+  <%# link_to 'Edit', edit_formulario_path(@formulario) %> |
+  <%= link_to 'Descargar', download_formulario_url(@formulario) %> |
+  <%= link_to 'Back', formularios_path %>
+</div>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @formulario.title %>
+</p>
+
+<p>
+  <strong>Cover letter:</strong>
+  <%= @formulario.cover_letter %>
+</p>
+
+<%# link_to 'Edit', edit_formulario_path(@formulario) %> |
+<%= link_to 'Descargar', download_formulario_url(@formulario) %> |
+<%= link_to 'Back', formularios_path %>
